@@ -1,4 +1,3 @@
-var lic = ["", ""]
 var usuari;
 var contrassenya;
 function registergo(){
@@ -9,13 +8,18 @@ function registergo(){
         else{
             document.form.submit();
         }
+        localStorage.setItem('usuari', (usuari))
+        localStorage.setItem('contrassenya', (contrassenya))
+
 }
 
 function logingo(){
     
-    if (document.form.password2.value != contrassenya && document.form.login2.value != usuari){ 
-        alert("Sisplau ingresi l'usuari i contrassenya correctament."); 
+    if (document.form.password2.value != localStorage.getItem('contrassenya') || document.form.login2.value != localStorage.getItem('usuari')){ 
+        alert("No es correcte, ingresi l'usuari i contrassenya correctament o ves a registrar-se primer."); 
         return false
         } 
         document.form.submit(); 
     } 
+
+

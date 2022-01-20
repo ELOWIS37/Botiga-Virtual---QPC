@@ -143,7 +143,7 @@ aside {
     padding: 5em;
     margin-right: 1em;
 }
-form {
+form .class {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -152,10 +152,23 @@ form {
     border: 5px solid var(--color-green);
     margin-bottom: 2rem;
 }
+form{
+    text-align: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    border: 5px solid var(--color-green);
+    padding: 1em;
+    padding-left: 13em;
+    padding-right: 13em;
+}
 .oferta{
     color:#C3C0C04F;
 }
-
+.logreg{
+    height: 100px;
+    width: 100px;
+}
 input, textarea {
     margin:2vh 5vw;
     background: var(--color-green);
