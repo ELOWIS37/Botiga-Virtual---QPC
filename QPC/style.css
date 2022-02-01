@@ -2,14 +2,9 @@
     --color-green: #264;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    color: #fff;
-}
 
 body {
-    padding-top: 30vh;
+    padding-top: 20vh;
     background-color: rgb(52, 40, 56);
 }
 
@@ -24,7 +19,6 @@ body {
     align-items: center;
     background-image: url(img/backgroundheader.jpg);
 }
-
 #header img {
     height: 100%;
 }
@@ -46,7 +40,6 @@ body {
     justify-content: center;
     align-items: center;
     list-style: none;
-    background: var(--color-green);
     height: 10vh;
 }
 #submenu {
@@ -75,7 +68,9 @@ body {
     color: #ff0;
     font-size: 2rem;
 }
-
+#lista-productos{
+    color: black;
+}
 #page {
     display: flex;
     width: 100%;
@@ -89,10 +84,20 @@ body {
     background: rgb(52, 40, 56);
     height: 120vh;
 }
+#page2 {
+    float: right;
+    justify-content: space-around;
+}
+
 #introduccio{
     margin-left: 1vh;
     margin-right: 1vh;
+    width: 680px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
 }
+
 table, td {
     border: 1px solid #48e;
 }
@@ -114,11 +119,25 @@ td {
     margin-left: 1em;
 
 }
+.seccio2{
+    width: 420px;
+    height: 120px;
+    border-style: solid;
+    border-color: aliceblue;
+    margin-left: 1em;
+}
+
 .imgprod{
         width: 300px;
         height: 300px;
         float: left;
         margin: 1em;
+}
+.imgaside {
+    width: 72px;
+    height: 90px;
+    float: left;
+    margin: 1em;
 }
 aside {
     background: url(img/trudly.png);
@@ -163,7 +182,7 @@ form{
     padding-right: 13em;
 }
 .oferta{
-    color:#C3C0C04F;
+    color:#e767674f;
 }
 .logreg{
     height: 100px;
@@ -186,6 +205,7 @@ h3{
 }
 p{
     font-size: 14px;
+    color: #fff;
 }
 .compra{
     padding: 1em;
@@ -198,8 +218,17 @@ p{
 }
 footer {
     background: #333;
+    color: #fff;
     height: 5vh;
     display: flex;
     justify-content: space-around;
     padding-top: .5rem;
 }
+
+#contactar1{
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    color: white;
+}
+

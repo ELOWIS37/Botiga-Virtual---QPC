@@ -1,127 +1,251 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="David Jorda i Eloy Castaño">
-    <meta name="description" content="Botiga virtual de PCs i components informàtics">
-    <title>QPC</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/popper.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <link rel="icon" href="img/logoIMG-invi.ico"> 
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+
+    <title>QPC</title>
 </head>
+
 <body>
-    <header id="header">
-        <img src="img/logo.png" alt="Logo"> <img src="img/textologo.png" alt="textologo">
-        <h1>Botiga Virtual de Pcs i components informàtics</h1>
-    </header>
-    <nav id="nav">
-        <ul id="menu">
-            <li class="menu__item"><a href="index.html">Inici</a></li>
-            <li class="menu__item"><a href="PCs.html">PCs</a></li>
-            <li class="menu__item"><a href="Consoles.html">Consoles</a></li>
-            <li class="menu__item"><a href="Components.html">Components</a></li>
-            <li class="menu__item"><a href="Contacte.html">Contacte</a></li>
-            <a href="registre.html"> <img class ="logreg" src="img/cesta.png"> </a>
-            <li class="menu__item">ㅤㅤㅤ</li>
-            <a href="registre.html"> <img class ="logreg" src="img/register.png"> </a>
-            <li class="menu__item"></li>
-            <a href="login.html"> <img class ="logreg" src="img/login.png"> </a>
-        </ul>
-        <ul id="submenu">
-            <li class="menu__item"><a href="Sobretaula.html">Sobretaula</a></li>
-            <li class="menu__item"><a href="Portatils.html">Portàtils</a></li>
-        </ul>
-    </nav>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <section id="page">
-        <section>
-            <div id="introduccio">
-                <h1></h1>
+
+    <header>
+        <div class="container">
+            <div class="menubackground">
+            <div class="row align-items-stretch justify-content-between">
+                <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto" id="menu">
+                            <li class="menu__item"><a href="index.html">Inici</a></li>
+                            <li class="menu__item"><a href="PCs.html">PCs</a></li>
+                            <li class="menu__item"><a href="Consoles.html">Consoles</a></li>
+                            <li class="menu__item"><a href="Components.html">Components</a></li>
+                            <li class="menu__item"><a href="Contacte.html">Contacte</a></li>
+                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown">
+                                <img src="img/cesta.png" class="logreg" class="nav-link dropdown-toggle img-fluid" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                            <li class="menu__item"></li>
+                            <a href="registre.html"> <img class ="logreg" src="img/register.png"> </a>
+                            <li class="menu__item"></li>
+                            <a href="login.html"> <img class ="logreg" src="img/login.png"> </a>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                        
+                        
+                        <p>ㅤㅤㅤ</p><h1>Botiga Virtual de Pcs i components informàtics</h1>
+                                
+                    </div>
+                </nav>
             </div>
-            <article id="productes">
-                <h1 class="titol">QPCs Destacats:</h1>
-                <div class="seccio">
-                    <img class="imgprod" src="img/PC1.jpg" alt="PC1">
-                    <h1 class="titolprod">PcCom Bronze Intel Core i5 10400F/8GB/480GBSSD/GTX1650</h3>
+        </div>
+    </header>
+
+    <main>
+        <div id="introduccio">
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+                <h1 class="display-4 mt-4">PCs Sobretaula</h1>
+                <p class="lead">Escull un dels millors PCs de Sobretaula de PcCom</p>
+            </div>
+        </div>
+        
+
+        <div class="container" id="lista-productos">
             
-                    <div class="descripcio">
-                        <h3 class="textprod">Descripció del producte:</h3>
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">PcCom Bronze</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/PC1.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">765</span>€</h1>
                         
-                        <p class="textprod">Entra en la nueva generación de procesadores Intel con el nuevo PCCOM Bronze Pro. Su procesador Intel Core i5-10400F de 2.9GHz, sus  8GB de RAM DDR4 y su potente tarjeta gráfica GTX 1650 te ofrecerán toda la potencia necesaria para disfrutar de los últimos juegos del mercado con una tasa de frames superior a 60fps y a resolución 1080p.</p>
-                        <div class="compra">
-                            <button type="button" class="btn btn-outline-secondary">Cistella</button>
-                            <button type="button" class="btn btn-primary btn-lg">Comprar</button>
-                            <h1 class="precio"><small><s class="oferta">900€</s>ㅤ</small>765€ <small class="dte">dte. 15%</small></h1>
-                        </div>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>8 GB RAM</li>
+                            <li>Intel i5-10400F</li>
+                            <li>480 GB SSD</li>
+                            <li><h1 class="oferta"><s>900€</s></h1></li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
                     </div>
                 </div>
-                <br>
-                <div class="seccio">
-                    <img class="imgprod" src="img/Portatil1.jpg" alt="PC1">
-                    <h1 class="titolprod">Asus VivoBook Pro 15 Ryzen 7 5800H 16GB/512GB/RTX 3050</h3>
-            
-                    <div class="descripcio">
-                        <h3 class="textprod">Descripció del producte:</h3>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">PcCom Silver</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/PC2.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">1099</span>€</h1>
                         
-                        <p class="textprod">El Vivobook Pro 15 es un portátil diferente que muestra tus verdaderos colores. Su impresionante pantalla FHD de 15,6 pulgadas y el sistema de sonido certificado por Harman Kardon te sumergen como nunca en todo lo que haces, ya sea trabajo o entretenimiento.</p>
-                        <br>
-                        <div class="compra">
-                            <button type="button" class="btn btn-outline-secondary">Cistella</button>
-                            <button type="button" class="btn btn-primary btn-lg">Comprar</button>
-                            <h1 class="precio">959€</h1>
-                        </div>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Ryzen 5 3600</li>
+                            <li>16 GB RAM</li>
+                            <li>480 GB SSD</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
                     </div>
                 </div>
-                <br>
-                <div class="seccio">
-                    <img class="imgprod" src="img/PC2.jpg" alt="PC1">
-                    <h1 class="titolprod">PcCom Silver AMD Ryzen 5 3600/16GB/480GBSSD/GTX1660Ti</h3>
-            
-                    <div class="descripcio">
-                        <h3 class="textprod">Descripció del producte:</h3>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">PcCom Gold</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/PC3.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">1899</span>€</h1>
                         
-                        <p class="textprod">El nuevo PcCom Silver está equipado con un procesador AMD Ryzen 5 3600, gráficos impresionantes gracias a su Nvidia GTX 1660 Ti de 6GB GDDR6 y 16GB de RAM DDR4 que te ofrecerá toda la potencia necesaria para disfrutar de los últimos juegos Online de más éxito del momento.</p>
-                        <div class="compra">
-                            <button type="button" class="btn btn-outline-secondary">Cistella</button>
-                            <button type="button" class="btn btn-primary btn-lg">Comprar</button>
-                            <h1 class="precio">1110€</h1>
-                        </div>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Intel i5-10600K</li>
+                            <li>16 GB RAM</li>
+                            <li>2 TB + 500 GB SSD</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Comprar</a>
                     </div>
                 </div>
-            </article>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </section>
-    </section>
+                
+            </div>
+
+            <div id="introduccio">
+                <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+                    <h1 class="display-4 mt-4">PCs Portàtils</h1>
+                    <p class="lead">Tenim diferents portàtils de bon rendiment a un bon preu</p>
+                </div>
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Acer Nitro 5</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/portatil3.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">1129</span>€</h1>
+                        
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>16 GB RAM</li>
+                            <li>i7-11800H</li>
+                            <li>1TB SSD</li>
+                            <li><h1 class="oferta"><s>1199€</s></h1></li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="4">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Asus VivoBook 15</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/Portatil1.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">1099</span>€</h1>
+                        
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>R.7 5800H</li>
+                            <li>16 GB RAM</li>
+                            <li>512 GB SSD</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="5">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">HP 255 G8</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/Portatil2.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">399</span>€</h1>
+                        
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>AMD 3020E</li>
+                            <li>8 GB RAM</li>
+                            <li>256 GB SSD</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="6">Comprar</a>
+                    </div>
+                </div>
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">MacBook Air</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/MAC book pro.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">1256</span>€</h1>
+                        
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Apple M1</li>
+                            <li>8 GB RAM</li>
+                            <li>512 GB SSD</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="7">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+    </main>
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
     <footer>
         <p>Telèfon de contacte:  634 256 156</p>
         <p>Copyright ©2022 QPC. All rights reserved.</p>
     </footer>
 </body>
+    
 </html>
-
-
-
-
-
 
 
 

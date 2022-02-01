@@ -1,120 +1,236 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="David Jorda i Eloy Castaño">
-    <meta name="description" content="Botiga virtual de PCs i components informàtics">
-    <title>QPC</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/popper.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <link rel="icon" href="img/logoIMG-invi.ico"> 
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+
+    <title>QPC</title>
 </head>
+
 <body>
-    <header id="header">
-        <img src="img/logo.png" alt="Logo"> <img src="img/textologo.png" alt="textologo">
-        <h1>Botiga Virtual de Pcs i components informàtics</h1>
-    </header>
-    <nav id="nav">
-        <ul id="menu">
-            <li class="menu__item"><a href="index.html">Inici</a></li>
-            <li class="menu__item"><a href="PCs.html">PCs</a></li>
-            <li class="menu__item"><a href="Consoles.html">Consoles</a></li>
-            <li class="menu__item"><a href="Components.html">Components</a></li>
-            <li class="menu__item"><a href="Contacte.html">Contacte</a></li>
-            <a href="registre.html"> <img class ="logreg" src="img/cesta.png"> </a>
-            <li class="menu__item">ㅤㅤㅤ</li>
-            <a href="registre.html"> <img class ="logreg" src="img/register.png"> </a>
-            <li class="menu__item"></li>
-            <a href="login.html"> <img class ="logreg" src="img/login.png"> </a>
-        </ul>
-        <ul id="submenu">
-            <li class="menu__item"><a href="GPU.html">Targetes Gràfiques</a></li>
-            <li class="menu__item"><a href="RAM.html">RAMs</a></li>
-            <li class="menu__item"><a href="procesadores.html">Processadors</a></li>
-        </ul>
-    </nav>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <section id="page">
-        <section>
-            <div id="introduccio">
-                <h1></h1>
-            </div>
-            <article id="productes">
-                <h1 class="titol">QPCs de Components:</h1>
-                <div class="seccio">
-                    <img class="imgprod" src="img/GPU NVIDIA.jpg" alt="PC1">
-                    <h1 class="titolprod">Gigabyte AORUS GeForce RTX 3060 ELITE REV 2.0 12GB GDDR6</h3>
-            
-                    <div class="descripcio">
-                        <h3 class="textprod">Descripció del producte:</h3>
-                        <p class="textprod"> Las GPU GeForce RTX™ serie 30 ofrecen el máximo rendimiento para jugadores y creadores. Cuentan con la tecnología de Ampere: la arquitectura RTX de segunda generación de NVIDIA, con nuevos núcleos de RT, núcleos Tensor y multiprocesadores de transmisión para los gráficos con trazado de rayos más realistas y las funciones de IA más vanguardistas.
-                        </p>
-                        <div class="compra">
-                            <button type="button" class="btn btn-outline-secondary">Cistella</button>
-                            <button type="button" class="btn btn-primary btn-lg">Comprar</button>
-                            <h1 class="precio"><small><s class="oferta">999€</s>ㅤ</small>799€ <small class="dte">dte. 20%</small></h1>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="seccio">
-                    <img class="imgprod" src="img/ramcrosair.jpg" alt="PC1">
-                    <h1 class="titolprod">Corsair Vengeance RGB Pro DDR4 3200 16GB 2x8GB CL16ㅤㅤ</h3>
-                    <div class="descripcio">
-                        <h3 class="textprod">Descripció del producte:</h3>
+
+    <header>
+        <div class="container">
+            <div class="menubackground">
+            <div class="row align-items-stretch justify-content-between">
+                <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto" id="menu">
+                            <li class="menu__item"><a href="index.html">Inici</a></li>
+                            <li class="menu__item"><a href="PCs.html">PCs</a></li>
+                            <li class="menu__item"><a href="Consoles.html">Consoles</a></li>
+                            <li class="menu__item"><a href="Components.html">Components</a></li>
+                            <li class="menu__item"><a href="Contacte.html">Contacte</a></li>
+                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown">
+                                <img src="img/cesta.png" class="logreg" class="nav-link dropdown-toggle img-fluid" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                            <li class="menu__item"></li>
+                            <a href="registre.html"> <img class ="logreg" src="img/register.png"> </a>
+                            <li class="menu__item"></li>
+                            <a href="login.html"> <img class ="logreg" src="img/login.png"> </a>
+                                </div>
+                            </li>
+                            
+                        </ul>
                         
-                        <p class="textprod">La memoria con overclocking DDR4 Corsair Vengeance RGB Pro ilumina el PC con un efecto hipnótico gracias a la iluminación RGB dinámica multizona, además de ofrecer las mejores características de las DDR4 en cuanto a rendimiento.</p>
-                        <br>
-                        <div class="compra">
-                            <button type="button" class="btn btn-outline-secondary">Cistella</button>
-                            <button type="button" class="btn btn-primary btn-lg">Comprar</button>
-                            <h1 class="precio">89€</small></h1>
-                        </div>
+                        
+                        <p>ㅤㅤㅤ</p><h1>Botiga Virtual de Pcs i components informàtics</h1>
+                                
                     </div>
-                </div>
-                <br>
-                <div class="seccio">
-                    <img class="imgprod" src="img/INTEL.jpg" alt="PC1">
-                    <h1 class="titolprod">Intel Core i5-12600K 4.9 GHzㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</h3>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="introduccio">
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+                <h1 class="display-4 mt-4">Targetes Gràfiques</h1>
+                <p class="lead">Escull unes de les millors targetes gràfiques de Nvidia i AMD</p>
+            </div>
+        </div>
+        
+
+        <div class="container" id="lista-productos">
             
-                    <div class="descripcio">
-                        <h3 class="textprod">Descripció del producte:</h3>
-                        <p class="textprod">Procesador de escritorio desbloqueado Intel® Core ™ i5-12600K de 12.ª generación. Con compatibilidad con PCIe Gen 5.0 y 4.0, compatibilidad con DDR5 y DDR4, los procesadores de escritorio Intel® Core ™ de 12.ª generación desbloqueados están optimizados para la productividad, los juegos y el overclocking. Solución térmica NO incluida en la caja.</p>                   
-                        <div class="compra">
-                            <button type="button" class="btn btn-outline-secondary">Cistella</button>
-                            <button type="button" class="btn btn-primary btn-lg">Comprar</button>
-                            <h1 class="precio">349€</h1>
-                        </div>
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Gigabyte GeForce 3060 RTX™</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/GPU NVIDIA.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">799</span>€</h1>
+                        
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>12 GB</li>
+                            <li>GDDR6</li>
+                            <li><h1 class="oferta"><s>999€</s></h1></li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="12">Comprar</a>
                     </div>
                 </div>
-            </article>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </section>
-    </section>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Radeon RX 6900</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/GPU AMD.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">549</span>€</h1>
+                        
+                        
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>16 GB</li>
+                            <li>GDDR6</li>
+                            <br>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="13">Comprar</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="introduccio">
+                <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+                    <h1 class="display-4 mt-4">RAMs</h1>
+                    <p class="lead">RAMs amb molta eficiència i velocitat a un preu assequible</p>
+                </div>
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">G.Skill Trident Z</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/RAM GSkill .jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">78</span>€</h1>
+                        
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>DDR4 3200Hz</li>
+                            <li>16 GB 2x8GB</li>
+                            <li>CL16</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="14">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Corsair Vengeanance Pro</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/ramcrosair.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">89</span>€</h1>
+
+                            
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>DDR4 3200Hz</li>
+                            <li>16 GB 2x8GB</li>
+                            <li>CL16</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="15">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="introduccio">
+                <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+                    <h1 class="display-4 mt-4">Processadors</h1>
+                    <p class="lead">Selecciona els processadors de Intel i AMD d'última generació </p>
+                </div>
+            </div>
+
+            <div class="card-deck mb-3 text-center">
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">AMD Ryzen 7 5800X</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/RYZEN.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">299</span>€</h1>
+                        
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Model-> 5800X</li>
+                            <li>Velocitat-> 3.8 GHz</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="16">Comprar</a>
+                    </div>
+                </div>
+                
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Intel i5-12600K</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/INTEL.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio"><span class="">349</span>€</h1>
+
+                            
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Model-> 12600K</li>
+                            <li>Velocitat-> 4.9 GHz</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="17">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </main>
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
     <footer>
         <p>Telèfon de contacte:  634 256 156</p>
         <p>Copyright ©2022 QPC. All rights reserved.</p>
     </footer>
 </body>
+    
 </html>

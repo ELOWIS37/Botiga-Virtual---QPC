@@ -1,59 +1,83 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="David Jorda i Eloy Castaño">
-    <meta name="description" content="Botiga virtual de PCs i components informàtics">
-    <title>QPC</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/popper.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <link rel="icon" href="img/logoIMG-invi.ico"> 
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+
+    <title>QPC</title>
 </head>
+
 <body>
-    <header id="header">
-        <img src="img/logo.png" alt="Logo"> <img src="img/textologo.png" alt="textologo">
-        <h1>Botiga Virtual de Pcs i components informàtics</h1>
-    </header>
-    <nav id="nav">
-        <ul id="menu">
-            <li class="menu__item"><a href="index.html">Inici</a></li>
-            <li class="menu__item"><a href="PCs.html">PCs</a></li>
-            <li class="menu__item"><a href="Consoles.html">Consoles</a></li>
-            <li class="menu__item"><a href="Components.html">Components</a></li>
-            <li class="menu__item"><a href="Contacte.html">Contacte</a></li>
-            <a href="registre.html"> <img class ="logreg" src="img/cesta.png"> </a>
-            <li class="menu__item">ㅤㅤㅤ</li>
-            <a href="registre.html"> <img class ="logreg" src="img/register.png"> </a>
-            <li class="menu__item"></li>
-            <a href="login.html"> <img class ="logreg" src="img/login.png"> </a>
-        </ul>
-    </nav>
-    <section id="page">
-        <section>
-            <div id="introduccio">
-                <h1>Contacte:</h1>
-                <br>
-                <h3>Podeu contactar amb nosaltres per qualsevol consulta o aclaració aquí:</h3>
-                <br>
-            <article id="contacte">
-                <form class="formulari">
-                    <label for="name">Nom</label>
-                    <input type="text" placeholder="Nom" required>
-                    <label for="email">E-mail</label>
-                    <input type="email" placeholder="example@gmail.com" required>
-                    <textarea cols="30" rows="10" placeholder="¿Digeme en que en que et puc ajudar?" required></textarea>
-                    <input type="submit">
-                </form>
+
+    <header>
+        <div class="container">
+            <div class="menubackground">
+            <div class="row align-items-stretch justify-content-between">
+                <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto" id="menu">
+                            <li class="menu__item"><a href="index.html">Inici</a></li>
+                            <li class="menu__item"><a href="PCs.html">PCs</a></li>
+                            <li class="menu__item"><a href="Consoles.html">Consoles</a></li>
+                            <li class="menu__item"><a href="Components.html">Components</a></li>
+                            <li class="menu__item"><a href="Contacte.html">Contacte</a></li>
+                            <li class="nav-item dropdown">
+                        
+                            <li class="menu__item"></li>
+                            <a href="registre.html"> <img class ="logreg" src="img/register.png"> </a>
+                            <li class="menu__item"></li>
+                            <a href="login.html"> <img class ="logreg" src="img/login.png"> </a>
+                        </ul>
+                        <p>ㅤㅤㅤ</p><h1>Botiga Virtual de Pcs i components informàtics</h1>
+
+                    </div>
+                </nav>
             </div>
-            </article>
-        </section>
-    </section>
+        </div>
+    </header>
+
+    <main>
+        <div id="introduccio">
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+                <h1 class="display-4 mt-4">Contacte</h1>
+                <p class="lead">Pot contactar amb nosaltres per qualsevol dubte o aclaració</p>
+            </div>
+        </div>
+        
+        <div id="contactar1">
+            <form>
+                <label for="name">Nom</label>
+                <input type="text" placeholder="Nom" required>
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="example@gmail.com" required>
+                <textarea cols="30" rows="10" placeholder="¿Digeme en que en que et puc ajudar?" required></textarea>
+                <input type="submit">
+            </form>
+        </div>
+        
+        
+    </main>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
     <footer>
         <p>Telèfon de contacte:  634 256 156</p>
         <p>Copyright ©2022 QPC. All rights reserved.</p>
     </footer>
 </body>
+    
 </html>
